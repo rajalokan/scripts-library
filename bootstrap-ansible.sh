@@ -28,10 +28,10 @@ function bootstrap_ansible {
     sudo chown -R ${USER}:${USER} /opt
     source_scripts_library
     GetOSVersion
-    # update_and_upgrade
-    # install_pip
+    update_and_upgrade
+    install_pip
     create_ansible_runtime_venv
-    # ensure_proper_version
+    ensure_proper_version
     install_ansible
     ensure_ansible_always_runs_from_venv
 }
