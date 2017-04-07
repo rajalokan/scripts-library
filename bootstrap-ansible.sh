@@ -168,11 +168,10 @@ function update_and_upgrade {
 # fi
 
 info_block "Bootstraping Ansible" 2> /dev/null ||
-    # if [[ ! -f /tmp/library.sh ]]; then
-    #     wget https://raw.githubusercontent.com/rajalokan/scripts-library/master/library.sh -O /tmp/library.sh 2> /dev/null
-    # fi
-    # source /tmp/library.sh
-    source library.sh
+    if [[ ! -f /tmp/library.sh ]]; then
+        wget https://raw.githubusercontent.com/rajalokan/scripts-library/master/library.sh -O /tmp/library.sh 2> /dev/null
+    fi
+    source /tmp/library.sh
     info_block "Bootstraping Ansible"
 
 bootstrap_ansible
